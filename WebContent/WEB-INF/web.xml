@@ -2,8 +2,8 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>AppMariana</display-name>
   <welcome-file-list>
-  	<welcome-file>main.html</welcome-file>
-  	<welcome-file>diretor.html</welcome-file>
+    <welcome-file>main.html</welcome-file>
+    <welcome-file>diretor.html</welcome-file>
     <welcome-file>coordenador.html</welcome-file>
     <welcome-file>professor.html</welcome-file>
     <welcome-file>estudante.html</welcome-file>
@@ -47,5 +47,15 @@
   <servlet-mapping>
     <servlet-name>DiretorController</servlet-name>
     <url-pattern>/DiretorController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AppController</display-name>
+    <servlet-name>AppController</servlet-name>
+    <servlet-class>controle.AppController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AppController</servlet-name>
+    <url-pattern>/AppController</url-pattern>
   </servlet-mapping>
 </web-app>
