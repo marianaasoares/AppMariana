@@ -15,7 +15,7 @@ public class Diretor extends Funcionario{
 				"%s: %s\n" +
 				"Adicional: %.2f\n",
 				"M".equals(this.getSexo()) ? "Diretor" : "Diretora",
-				super.toString(),jk
+				super.toString(),
 				this.getAdicional()
 			);
 	}
