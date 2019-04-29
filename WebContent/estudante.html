@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cadastro de Estudante</title>
+</head>
+<body>
+
+	<form action="EstudanteController" method="post">
+	
+		<input type="submit" value="Cadastrar">
+		
+		<hr>
+		
+		<h3>Nome</h3>
+		<input type="text" name="nome">
+	
+		<h3>Idade</h3>
+		<input type="text" name="idade">
+	
+		<h3>Mensalidade</h3>
+		<input type="text" name="mensalidade">
+	
+		<h3>Login</h3>
+		<input type="text" name="login">
+	
+		<h3>Senha</h3>
+		<input type="password" name="senha">
+		
+		<h3>Sexo</h3>
+		<input type="radio" name="sexo" value="M"> Masculino
+		<input type="radio" name="sexo" value="F"> Feminino
+	
+		<h3>Município</h3>
+		<select name="municipio">
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="NT">Niterói</option>
+			<option value="MR">Maricá</option>
+			<option value="CX">Caxias</option>
+		</select>
+	
+		<h3>Disciplinas</h3>
+		<input type="checkbox" name="disciplinas" value="POR"> português<br>
+		<input type="checkbox" name="disciplinas" value="MAT"> matemática<br>
+		<input type="checkbox" name="disciplinas" value="EST"> estudos sociais<br>
+		<input type="checkbox" name="disciplinas" value="CIE"> ciências<br>
+	</form>
+</body>
+</html>
