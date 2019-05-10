@@ -1,7 +1,7 @@
 package controle;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -30,8 +30,8 @@ public class DiretorController extends HttpServlet {
 		diretor.setSalario(Float.parseFloat(request.getParameter("salario")));
 		diretor.setAdicional(Float.parseFloat(request.getParameter("adicional")));
 		
-		PrintWriter html = response.getWriter();		
-		html.println("<h3>"+diretor+"</h3>");
+		request.setAttribute("titulo", "Diretor");
+		request.setAttribute("mensagem", diretor.toString());
 		
 		
 		

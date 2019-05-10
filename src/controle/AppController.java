@@ -16,14 +16,16 @@ public class AppController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String tela = request.getParameter("tela").toLowerCase()+".html";
+		String tela = request.getParameter("tela").toLowerCase()+"Detalhe.html";
 		
 		request.getRequestDispatcher(tela).forward(request, response);
 		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String tela = request.getParameter("tela").toLowerCase()+"Lista.jsp";
 		
+		request.getRequestDispatcher(tela).forward(request, response);
 	}
 
 }

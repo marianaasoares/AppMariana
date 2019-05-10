@@ -1,7 +1,7 @@
 package controle;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +32,7 @@ public class ProfessorController extends HttpServlet {
 		professor.setSalario(Float.valueOf(request.getParameter("salario")));
 		professor.setCursos(request.getParameterValues("cursos"));
 		
-		PrintWriter html = response.getWriter();		
-		html.println("<h3>"+professor+"</h3>");
+		request.setAttribute("titulo", "Professor");
+		request.setAttribute("mensagem", professor.toString());
 	}
 }

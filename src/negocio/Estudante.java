@@ -10,23 +10,29 @@ public class Estudante {
 	private String sexo;
 	private String municipio;
 	private String[] disciplinas;
-	
+
 	public void exibir() {
-		System.out.printf(
-				"%s: %s (%s)\n" + 
-				"%s de %s\n",
-				"M".equals(this.getSexo()) ? "Aluno" : "Aluna",
-				this.getNome(),
-				this.getLogin(),
-				"M".equals(this.getSexo()) ? "Morador" : "Moradora",
-				this.getMunicipio()
-			);
-		
+		System.out.println(this.toString());
 		System.out.println("Disciplinas:"); 
 		for(String disciplina : this.getDisciplinas()) {			
 			System.out.println("- " + disciplina);
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return String.format(
+				"%s: %s (%s)\n" + 
+						"%s de %s\n",
+						"M".equals(this.getSexo()) ? "Aluno" : "Aluna",
+						this.getNome(),
+						this.getLogin(),
+						"M".equals(this.getSexo()) ? "Morador" : "Moradora",
+						this.getMunicipio()
+			);
+		
+	}
+	
 
 	public String getNome() {
 		return nome;

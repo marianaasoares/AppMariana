@@ -1,7 +1,7 @@
 package controle;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +31,7 @@ public class CoordenadorController extends HttpServlet {
 		coordenador.setSalario(Float.valueOf(request.getParameter("salario")));
 		coordenador.setCurso(request.getParameter("curso"));
 		
-		PrintWriter html = response.getWriter();		
-		html.println("<h3>"+coordenador+"</h3>");
+		request.setAttribute("titulo", "Coordenador");
+		request.setAttribute("mensagem", coordenador.toString());
 	}
 }

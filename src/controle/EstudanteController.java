@@ -32,6 +32,10 @@ public class EstudanteController extends HttpServlet {
 		estudante.setMunicipio(request.getParameter("municipio"));
 		estudante.setDisciplinas(request.getParameterValues("disciplinas"));
 		
-		estudante.exibir();		
+		request.setAttribute("titulo", "Estudante");
+		request.setAttribute("mensagem", estudante.toString());
+		
+		
+		request.getRequestDispatcher("finaliza.jsp").forward(request, response);	
 	}
 }
