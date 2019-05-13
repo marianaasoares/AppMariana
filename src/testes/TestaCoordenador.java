@@ -1,5 +1,6 @@
 package testes;
 
+import dao.CoordenadorDao;
 import negocio.Coordenador;
 
 public class TestaCoordenador {
@@ -15,6 +16,8 @@ public class TestaCoordenador {
 		coordenador.setUniversidade("Infnet");
 		coordenador.setSalario(1000);
 		coordenador.setCurso("ciência da computação");
+		
+		CoordenadorDao.incluir(coordenador);
 		
 		coordenador.exibir();
 	}

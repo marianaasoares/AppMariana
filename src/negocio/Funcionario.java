@@ -2,6 +2,7 @@ package negocio;
 
 public abstract class Funcionario {
 
+	private int id;
 	private String nome;
 	private String login;
 	private String senha;
@@ -59,5 +60,13 @@ public abstract class Funcionario {
 	}
 	public void setSalario(float salario) {
 		this.salario = salario;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }

@@ -1,5 +1,6 @@
 package testes;
 
+import dao.ProfessorDao;
 import negocio.Professor;
 
 public class TestaProfessor {
@@ -17,6 +18,8 @@ public class TestaProfessor {
 		professor.setUniversidade("Infnet");
 		professor.setSalario(1000);
 		professor.setCursos(lista);
+		
+		ProfessorDao.incluir(professor);
 		
 		professor.exibir();
 	}

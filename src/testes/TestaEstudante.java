@@ -1,5 +1,6 @@
 package testes;
 
+import dao.EstudanteDao;
 import negocio.Estudante;
 
 public class TestaEstudante {
@@ -18,6 +19,8 @@ public class TestaEstudante {
 		estudante.setSexo("F");
 		estudante.setMunicipio("Maricá");
 		estudante.setDisciplinas(lista);
+		
+		EstudanteDao.incluir(estudante);
 		
 		estudante.exibir();
 	}

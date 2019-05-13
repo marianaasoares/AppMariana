@@ -1,5 +1,7 @@
 package testes;
 
+
+import dao.DiretorDao;
 import negocio.Diretor;
 
 public class TestaDiretor {
@@ -14,6 +16,8 @@ public class TestaDiretor {
 		diretor.setUniversidade("Infnet");
 		diretor.setSalario(1000);
 		diretor.setAdicional(500);
+		
+		DiretorDao.incluir(diretor);
 		
 		diretor.exibir();
 	}

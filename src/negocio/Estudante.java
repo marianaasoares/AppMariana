@@ -1,5 +1,6 @@
 package negocio;
 
+
 public class Estudante {
 
 	private String nome;
@@ -33,7 +34,7 @@ public class Estudante {
 		
 	}
 	
-
+	
 	public String getNome() {
 		return nome;
 	}

@@ -1,5 +1,6 @@
 package negocio;
 
+
 public class Professor extends Funcionario {
 
 	private String[] cursos;
@@ -25,6 +26,8 @@ public class Professor extends Funcionario {
 				cursos
 			);
 	}
+	
+	
 	
 	public String[] getCursos() {
 		return cursos;

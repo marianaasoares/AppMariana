@@ -12,11 +12,11 @@ public class Conexao {
 
 		if (conn == null){
 
-			String serverName = "localhost";			
+			String serverName = "146.148.43.62";			
 			String bancoDados = "dbinfnet";      				
 			String url = "jdbc:mysql://" + serverName + "/" + bancoDados + "?useTimezone=true&serverTimezone=UTC";				
 			String usuario = "root";              				
-			String senha = "admin";
+			String senha = "qualqueruma";
 
 			try {
 				DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());

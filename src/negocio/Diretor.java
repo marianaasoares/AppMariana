@@ -1,5 +1,6 @@
 package negocio;
 
+
 public class Diretor extends Funcionario{
 
 	public float adicional;
@@ -19,6 +20,9 @@ public class Diretor extends Funcionario{
 				this.getAdicional()
 			);
 	}
+	
+	
+	
 	
 	public float getAdicional() {
 		return adicional;

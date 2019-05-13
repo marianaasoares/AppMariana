@@ -1,5 +1,6 @@
 package negocio;
 
+
 public class Coordenador extends Funcionario {
 
 	private String curso;
@@ -19,6 +20,9 @@ public class Coordenador extends Funcionario {
 				this.getCurso()
 			);
 	}
+	
+	
+
 	
 	public String getCurso() {
 		return curso;
