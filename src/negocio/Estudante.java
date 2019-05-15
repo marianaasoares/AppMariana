@@ -27,8 +27,12 @@ public class Estudante {
 	public void exibir() {
 		System.out.println(this.toString());
 		System.out.println("Disciplinas:"); 
+		if(this.getDisciplinas() != null) {
 		for(String disciplina : this.getDisciplinas()) {			
 			System.out.println("- " + disciplina);
+			}
+		}else {
+			System.out.println("Não existe!");
 		}
 	}
 	

@@ -18,10 +18,10 @@ public class TestaEstudante {
 		estudante.setMunicipio("Maricá");
 		estudante.setMensalidade(1000);
 		estudante.setDisciplinas(lista);
-		
-		EstudanteDao.incluir(estudante);
-		
-		estudante.exibir();
+//		
+//		EstudanteDao.incluir(estudante);
+//		
+//		estudante.exibir();
 		
 		for (Estudante e : EstudanteDao.obterLista()) {
 			e.exibir();
