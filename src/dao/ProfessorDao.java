@@ -3,12 +3,18 @@ package dao;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.List;
 
+import auxiliar.Constante;
 import conexao.Conexao;
 import negocio.Professor;
 
 public class ProfessorDao {
 
+	
+	public static List<Professor> obterLista(){
+		return Constante.PROFESSORES;
+	}
 	
 	public static boolean incluir(Professor professor){
 		try {

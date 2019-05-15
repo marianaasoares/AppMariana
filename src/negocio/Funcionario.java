@@ -10,6 +10,16 @@ public abstract class Funcionario {
 	private String universidade;
 	private float salario;
 	
+	public Funcionario() {
+		
+	}
+	
+	public Funcionario(String nome, String universidade, float salario) {
+		this.setNome(nome);
+		this.setUniversidade(universidade);
+		this.setSalario(salario);
+	}
+	
 	public abstract void exibir();
 	
 	@Override

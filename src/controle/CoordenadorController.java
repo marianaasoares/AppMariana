@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.CoordenadorDao;
 import negocio.Coordenador;
 
 public class CoordenadorController extends HttpServlet {
@@ -30,6 +31,8 @@ public class CoordenadorController extends HttpServlet {
 		coordenador.setUniversidade(request.getParameter("universidade"));
 		coordenador.setSalario(Float.valueOf(request.getParameter("salario")));
 		coordenador.setCurso(request.getParameter("curso"));
+		
+		CoordenadorDao.incluir(coordenador);
 		
 		request.setAttribute("titulo", "Coordenador");
 		request.setAttribute("mensagem", coordenador.toString());

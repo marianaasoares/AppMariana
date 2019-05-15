@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.EstudanteDao;
 import negocio.Estudante;
 
 public class EstudanteController extends HttpServlet {
@@ -31,6 +32,8 @@ public class EstudanteController extends HttpServlet {
 		estudante.setSexo(request.getParameter("sexo"));
 		estudante.setMunicipio(request.getParameter("municipio"));
 		estudante.setDisciplinas(request.getParameterValues("disciplinas"));
+		
+		EstudanteDao.incluir(estudante);
 		
 		request.setAttribute("titulo", "Estudante");
 		request.setAttribute("mensagem", estudante.toString());

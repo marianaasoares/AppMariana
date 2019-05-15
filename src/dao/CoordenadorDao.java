@@ -2,12 +2,18 @@ package dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
+import auxiliar.Constante;
 import conexao.Conexao;
 import negocio.Coordenador;
 
 public class CoordenadorDao {
 
+	
+	public static List<Coordenador> obterLista(){
+		return Constante.COORDENADORES;
+	}
 	
 	public static boolean incluir(Coordenador coordenador){
 		try {

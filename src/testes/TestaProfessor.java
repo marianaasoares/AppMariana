@@ -10,8 +10,7 @@ public class TestaProfessor {
 		String[] lista = {"computação", "engenharia de software", "letras"};
 		
 		Professor professor = new Professor();
-		
-		professor.setNome("tio manoel");
+		professor.setNome("Márcia");
 		professor.setLogin("tio.manoel");
 		professor.setSenha("123456");
 		professor.setSexo("M");
@@ -22,5 +21,9 @@ public class TestaProfessor {
 		ProfessorDao.incluir(professor);
 		
 		professor.exibir();
+		
+		for (Professor p : ProfessorDao.obterLista()) {
+			p.exibir();
+		}
 	}
 }

@@ -11,6 +11,18 @@ public class Estudante {
 	private String sexo;
 	private String municipio;
 	private String[] disciplinas;
+	
+	
+	public Estudante() {
+		
+	}
+	
+	public Estudante(String nome, int idade, float mensalidade, String municipio) {
+		this.setNome(nome);
+		this.setIdade(idade);
+		this.setMensalidade(mensalidade);
+		this.setMunicipio(municipio);
+	}
 
 	public void exibir() {
 		System.out.println(this.toString());

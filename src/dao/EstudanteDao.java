@@ -3,11 +3,17 @@ package dao;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.List;
 
+import auxiliar.Constante;
 import conexao.Conexao;
 import negocio.Estudante;
 
 public class EstudanteDao {
+	
+	public static List<Estudante> obterLista(){
+		return Constante.ESTUDANTES;
+	}
 
 	public static boolean incluir(Estudante estudante){
 		try {

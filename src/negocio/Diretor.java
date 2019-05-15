@@ -5,6 +5,16 @@ public class Diretor extends Funcionario{
 
 	public float adicional;
 	
+	public Diretor() {
+		
+	}
+	
+	public Diretor(String nome, String universidade, float salario, float adicional) {
+		super(nome, universidade, salario);
+		this.setAdicional(adicional);
+		
+	}
+	
 	@Override
 	public void exibir() {
 		System.out.println(this.toString());

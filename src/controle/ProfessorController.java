@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.ProfessorDao;
 import negocio.Professor;
 
 public class ProfessorController extends HttpServlet {
@@ -31,6 +32,9 @@ public class ProfessorController extends HttpServlet {
 		professor.setUniversidade(request.getParameter("universidade"));
 		professor.setSalario(Float.valueOf(request.getParameter("salario")));
 		professor.setCursos(request.getParameterValues("cursos"));
+		
+		
+		ProfessorDao.incluir(professor);
 		
 		request.setAttribute("titulo", "Professor");
 		request.setAttribute("mensagem", professor.toString());

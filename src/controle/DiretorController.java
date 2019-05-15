@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.DiretorDao;
 import negocio.Diretor;
 
 public class DiretorController extends HttpServlet {
@@ -29,6 +30,8 @@ public class DiretorController extends HttpServlet {
 		diretor.setUniversidade(request.getParameter("universidade"));
 		diretor.setSalario(Float.parseFloat(request.getParameter("salario")));
 		diretor.setAdicional(Float.parseFloat(request.getParameter("adicional")));
+		
+		DiretorDao.incluir(diretor);
 		
 		request.setAttribute("titulo", "Diretor");
 		request.setAttribute("mensagem", diretor.toString());

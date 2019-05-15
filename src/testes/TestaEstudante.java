@@ -10,18 +10,21 @@ public class TestaEstudante {
 		String[] lista = {"português", "matemática", "estudos sociais", "ciências"};
 		
 		Estudante estudante = new Estudante();
-		
-		estudante.setNome("joao da silva");
+		estudante.setNome("João da Silva");
 		estudante.setIdade(20);
-		estudante.setMensalidade(1000);
 		estudante.setLogin("joao.silva");
 		estudante.setSenha("123456");
 		estudante.setSexo("F");
 		estudante.setMunicipio("Maricá");
+		estudante.setMensalidade(1000);
 		estudante.setDisciplinas(lista);
 		
 		EstudanteDao.incluir(estudante);
 		
 		estudante.exibir();
+		
+		for (Estudante e : EstudanteDao.obterLista()) {
+			e.exibir();
+		}
 	}
 }

@@ -2,12 +2,18 @@ package dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
+import auxiliar.Constante;
 import conexao.Conexao;
 import negocio.Diretor;
 
 public class DiretorDao {
 
+	
+	public static List<Diretor> obterLista(){
+		return Constante.DIRETORES;
+	}
 	
 	public static boolean incluir(Diretor diretor){
 		try {

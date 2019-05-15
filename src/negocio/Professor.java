@@ -5,6 +5,17 @@ public class Professor extends Funcionario {
 
 	private String[] cursos;
 	
+	
+	public Professor() {
+		
+	}
+	
+	public Professor(String nome, String universidade, float salario, String[] cursos) {
+		super(nome, universidade, salario);
+		this.setCursos(cursos);
+		
+	}
+	
 	@Override
 	public void exibir() {
 		System.out.println(this.toString());

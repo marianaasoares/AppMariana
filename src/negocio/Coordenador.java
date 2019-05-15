@@ -5,6 +5,15 @@ public class Coordenador extends Funcionario {
 
 	private String curso;
 	
+	public Coordenador() {
+		
+	}
+	
+	public Coordenador(String nome, String universidade, float salario, String curso){
+		super(nome, universidade, salario);
+		this.setCurso(curso);
+	}
+	
 	@Override
 	public void exibir() {
 		System.out.println(this.toString());
