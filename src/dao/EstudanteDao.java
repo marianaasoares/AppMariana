@@ -19,7 +19,7 @@ public class EstudanteDao {
 		try {
 			PreparedStatement ps = 
 					Conexao.obterConexao().prepareStatement(
-							"INSERT INTO TEstudante "
+							"INSERT INTO testudante "
 							+ "(nome, idade, mensalidade, login, senha, sexo, municipio, disciplinas) "
 							+ "VALUES "
 							+ "(?,?,?,?,?)"

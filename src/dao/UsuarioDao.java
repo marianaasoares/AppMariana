@@ -11,7 +11,7 @@ public class UsuarioDao {
 
 	
 	public static boolean validar (Usuario usuario) {	
-		String sql = "SELECT * FROM TUsuario WHERE email = ? and senha = ?";
+		String sql = "SELECT * FROM tusuario WHERE email = ? and senha = ?";
 		
 		try {
 			PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
